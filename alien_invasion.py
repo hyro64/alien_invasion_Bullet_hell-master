@@ -28,7 +28,7 @@ def run_game():
             if event.type == pygame.QUIT:
                 sys.exit()
         #Redraw the Screen during each pass through the loop
-        screen.fill(bg_color)
+        screen.fill(ai_settings.bg_color)
 
         #Make the mos recently drawn screen visible.
         pygame.display.flip()
