@@ -3,6 +3,7 @@ import sys
 import pygame
 
 from settings import Settings
+from ship import Ship
 
 def run_game():
     #Initialize game and creats a screen object(old)
@@ -16,10 +17,13 @@ def run_game():
 
     pygame.display.set_caption("Alien Invasion")
 
+    # Make a Ship
+    ship = Ship(screen)
+
     #Set the background color.
     bg_color = ( 230, 230, 230 )
 
-    #Start the main loop for the game.
+    #Start the main loop for thself.rect.centerx = self.screen_rect.centerxe game.
     while True:
 
 
@@ -29,6 +33,7 @@ def run_game():
                 sys.exit()
         #Redraw the Screen during each pass through the loop
         screen.fill(ai_settings.bg_color)
+        ship.blitme()
 
         #Make the mos recently drawn screen visible.
         pygame.display.flip()
