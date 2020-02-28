@@ -1,9 +1,8 @@
-import sys
-
 import pygame
 
 from settings import Settings
 from ship import Ship
+import game_functions as gf
 
 def run_game():
     #Initialize game and creats a screen object(old)
@@ -20,12 +19,13 @@ def run_game():
     # Make a Ship
     ship = Ship(screen)
 
-    #Set the background color.
-    bg_color = ( 230, 230, 230 )
+    #Set the background color RGB.
+    bg_color = ( 0, 0, 115 )
 
     #Start the main loop for thself.rect.centerx = self.screen_rect.centerxe game.
     while True:
-
+        gf.check_events()
+        gf.update_screen(ai_settings, screen, ship)
 
         # Watch for keyboard and mouse events
         for event in pygame.event.get():
